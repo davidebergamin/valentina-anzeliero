@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #241f1b;
+  --muted: #74685f;
+  --line: #ded3c6;
+  --paper: #ffffff;
+  --blush: #ead8cf;
+  --sage: #cfd8d2;
+  --taupe: #a89582;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--blush);
+  color: var(--foreground);
+}
+
+.serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.container-valentina {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
+.hairline {
+  border-color: color-mix(in srgb, var(--line) 88%, var(--foreground));
+}
+
+.text-balance {
+  text-wrap: balance;
+}
