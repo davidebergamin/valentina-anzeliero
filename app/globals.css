@@ -171,8 +171,7 @@ img {
   max-width: 100%;
 }
 
-.photo-frame--bleed,
-.hero-home__photo {
+.photo-frame--bleed {
   width: 100%;
   margin: 0;
 }
@@ -212,39 +211,37 @@ img {
   }
 }
 
-/* Hero — foto full width (nessuna banda), titolo in basso sul viewport */
+/* Hero — foto intera nel viewport, sfondo bianco (no bande nere), titolo in basso */
 .hero-home {
   position: relative;
   min-height: calc(100vh - 5rem);
+  overflow: hidden;
   background: var(--background);
   color: #fff;
 }
 
-.hero-home__photo {
-  display: block;
-  width: 100%;
-  margin: 0;
-  line-height: 0;
+.hero-home__image {
+  position: absolute;
+  inset: 0;
+  background: var(--background);
 }
 
-.hero-home__photo img {
-  display: block;
-  width: 100%;
-  height: auto !important;
-  max-width: 100%;
+.hero-home__img,
+.hero-home__image img {
+  object-fit: contain !important;
+  object-position: center;
   filter: grayscale(0.12) contrast(1.06) saturate(0.88);
 }
 
 .hero-home__copy {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 2;
   display: flex;
+  min-height: calc(100vh - 5rem);
   align-items: flex-end;
   padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
   padding-top: 2rem;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.42) 100%);
 }
 
 .hero-home__copy > * {
