@@ -10,7 +10,7 @@ export function StoryGrid({ limit, variant = "stories" }: { limit?: number; vari
       {visibleStories.map((story) => (
         <article key={story.slug}>
           <Link href={`/${story.slug}/`} className="group block">
-            <PhotoFrame src={story.image} alt={story.alt} sizes="100vw" />
+            <PhotoFrame src={story.image} alt={story.alt} sizes="(max-width: 768px) 100vw, 50vw" />
             <div className="story-card-meta">
               <p className="story-card-location">{story.location}</p>
               <h3 className="card-title story-card-title">{story.title}</h3>

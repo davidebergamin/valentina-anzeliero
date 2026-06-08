@@ -15,12 +15,12 @@ export function ServiziPageView() {
         <p className="body-text max-w-2xl">{serviceHubIntro}</p>
       </section>
 
-      <section className="pb-24 md:pb-32">
+      <section className="container-liquid pb-24 md:pb-32">
         <div className="service-cards">
           {serviceCards.map((service) => (
             <Link key={service.href} href={service.href} className="service-card group">
-              <PhotoFrame src={service.image} alt={service.title} sizes="100vw" />
-              <div className="service-card-body container-liquid">
+              <PhotoFrame src={service.image} alt={service.title} sizes="(max-width: 768px) 100vw, 25vw" />
+              <div className="service-card-body">
                 <h2 className="card-title transition group-hover:text-[var(--muted)]">{service.title}</h2>
                 <p className="body-text mt-4">{service.text}</p>
               </div>

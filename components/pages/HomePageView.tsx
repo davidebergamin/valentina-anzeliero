@@ -14,16 +14,7 @@ export function HomePageView() {
     <main>
       <section className="hero-home">
         <div className="hero-home__image">
-          <Image
-            src={heroHome}
-            alt="Matrimonio nel Veneto — Valentina Anzeliero"
-            width={heroHome.width}
-            height={heroHome.height}
-            priority
-            sizes="100vw"
-            className="hero-home__img"
-            unoptimized
-          />
+          <Image src={heroHome} alt="Matrimonio nel Veneto — Valentina Anzeliero" fill priority sizes="100vw" className="object-contain" unoptimized />
         </div>
         <div className="hero-home__copy container-liquid">
           <div className="max-w-5xl">

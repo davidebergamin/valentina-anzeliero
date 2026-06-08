@@ -5,11 +5,11 @@ import { contact, copy } from "@/lib/site-data";
 export function ContactPageView() {
   return (
     <main>
-      <section className="section-pad">
-        <div className="container-liquid">
+      <section className="container-liquid grid gap-12 section-pad md:grid-cols-[0.95fr_1.05fr] md:items-start">
+        <div>
           <SectionEyebrow>{copy.contactTitle}</SectionEyebrow>
           <h1 className="section-title">{copy.contactTitle}</h1>
-          <div className="mt-9 grid max-w-3xl gap-4">
+          <div className="mt-9 grid gap-4">
             <p className="body-text">{copy.contactIntro}</p>
             {contact.phone ? (
               <a href={`tel:${contact.phone.replaceAll(" ", "")}`} className="lead">
@@ -28,9 +28,7 @@ export function ContactPageView() {
             </a>
           </div>
         </div>
-        <div className="mt-12">
-          <PhotoFrame src="/photos/120.webp" alt="Contatta Valentina Anzeliero" priority sizes="100vw" />
-        </div>
+        <PhotoFrame src="/photos/120.webp" alt="Contatta Valentina Anzeliero" priority sizes="(max-width: 768px) 100vw, 42vw" />
       </section>
     </main>
   );

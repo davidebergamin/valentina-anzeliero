@@ -16,7 +16,7 @@ export function SimpleGalleryPageView({ type }: { type: GalleryType }) {
         <SectionEyebrow>Servizi</SectionEyebrow>
         <h1 className="section-title">{service.title}</h1>
       </section>
-      <section className="section-pad-tight pb-24 md:pb-32">
+      <section className="container-liquid pb-24 md:pb-32">
         <PortfolioMasonry items={items} />
       </section>
       <ContactBand />

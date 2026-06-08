@@ -29,7 +29,7 @@ export function InstagramStrip() {
               className="instagram-strip-item bg-white"
               aria-label={`Apri Instagram — ${photo.alt}`}
             >
-              <PhotoFrame src={photo.src} alt={photo.alt} sizes="100vw" />
+              <PhotoFrame src={photo.src} alt={photo.alt} sizes="(max-width: 768px) 50vw, 25vw" />
             </a>
           ))}
         </div>

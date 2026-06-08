@@ -8,9 +8,9 @@ type PortfolioMasonryProps = {
   className?: string;
 };
 
-export function PortfolioMasonry({ items, sizes = "100vw", className = "" }: PortfolioMasonryProps) {
+export function PortfolioMasonry({ items, sizes = "(max-width: 768px) 100vw, 46vw", className = "" }: PortfolioMasonryProps) {
   return (
-    <div className={`photo-stack ${className}`}>
+    <div className={`photo-grid--gallery ${className}`}>
       {items.map((item, index) => (
         <div key={`${item.src}-${index}`}>
           <PhotoFrame src={item.src} alt={item.alt} sizes={sizes} />

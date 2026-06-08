@@ -6,11 +6,11 @@ import { aboutBody, copy } from "@/lib/site-data";
 export function AboutStudioPageView() {
   return (
     <main>
-      <section className="section-pad">
-        <div className="container-liquid">
+      <section className="container-liquid grid gap-12 section-pad md:grid-cols-[0.9fr_1.1fr] md:items-center">
+        <div>
           <SectionEyebrow>Chi sono</SectionEyebrow>
           <h1 className="section-title">{copy.aboutTitle}</h1>
-          <div className="mt-8 grid max-w-3xl gap-5">
+          <div className="mt-8 grid gap-5">
             {aboutBody.map((paragraph) => (
               <p key={paragraph} className="body-text">
                 {paragraph}
@@ -18,9 +18,9 @@ export function AboutStudioPageView() {
             ))}
           </div>
         </div>
-        <div className="photo-stack mt-12">
-          <PhotoFrame src="/photos/050.webp" alt="Valentina Anzeliero — fotografa matrimonio Treviso" priority sizes="100vw" />
-          <PhotoFrame src="/photos/090.webp" alt="Reportage matrimonio nel Veneto" sizes="100vw" />
+        <div className="grid gap-6">
+          <PhotoFrame src="/photos/050.webp" alt="Valentina Anzeliero — fotografa matrimonio Treviso" priority sizes="(max-width: 768px) 100vw, 42vw" />
+          <PhotoFrame src="/photos/090.webp" alt="Reportage matrimonio nel Veneto" sizes="(max-width: 768px) 100vw, 42vw" />
         </div>
       </section>
       <ContactBand />

@@ -13,7 +13,7 @@ export function HomeBridgeSection() {
       <div className="home-bridge__band">
         {photos.map((photo) => (
           <div key={photo.src} className="home-bridge__item">
-            <PhotoFrame src={photo.src} alt={photo.alt} sizes="100vw" />
+            <PhotoFrame src={photo.src} alt={photo.alt} sizes="(max-width: 768px) 100vw, 33vw" />
           </div>
         ))}
       </div>

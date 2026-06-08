@@ -140,7 +140,7 @@ export function RecensioniSection() {
 
         <div className="reviews-featured">
           <div className="reviews-featured__photo">
-            <PhotoFrame src="/photos/120.webp" alt="Momento di matrimonio nel Veneto" priority sizes="100vw" />
+            <PhotoFrame src="/photos/120.webp" alt="Momento di matrimonio nel Veneto" priority sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <figure className="review-card review-card--spotlight">
             <div className="review-card-stars" aria-label="Valutazione 5 su 5">
