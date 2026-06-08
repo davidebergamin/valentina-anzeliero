@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import heroHome from "../../public/photos/001.jpg";
 import { InstagramStrip } from "@/componenti/InstagramStrip";
+import { PhotoFrame } from "@/components/PhotoFrame";
 import { RecensioniSection } from "@/componenti/RecensioniSection";
 import { HomeBridgeSection } from "@/components/HomeBridgeSection";
 import { HomeScatterSection } from "@/components/HomeScatterSection";
@@ -13,9 +12,13 @@ export function HomePageView() {
   return (
     <main>
       <section className="hero-home">
-        <div className="hero-home__image">
-          <Image src={heroHome} alt="Matrimonio nel Veneto — Valentina Anzeliero" fill priority sizes="100vw" className="object-contain" unoptimized />
-        </div>
+        <PhotoFrame
+          src="/photos/001.jpg"
+          alt="Matrimonio nel Veneto — Valentina Anzeliero"
+          priority
+          className="hero-home__photo"
+          sizes="100vw"
+        />
         <div className="hero-home__copy container-liquid">
           <div className="max-w-5xl">
             <SectionEyebrow light>{copy.heroEyebrow}</SectionEyebrow>

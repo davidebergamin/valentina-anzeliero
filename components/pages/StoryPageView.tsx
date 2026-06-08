@@ -16,19 +16,19 @@ export function StoryPageView({ story }: { story: Story }) {
   return (
     <main>
       <section className="bg-white">
-        <PhotoFrame src={story.image} alt={story.alt} priority className="mx-auto w-full max-w-[1600px]" />
+        <PhotoFrame src={story.image} alt={story.alt} priority className="photo-frame--bleed" />
         <div className="container-liquid section-pad-tight">
           <SectionEyebrow>{story.location}</SectionEyebrow>
           <h1 className="section-title mt-4 text-balance">{story.title}</h1>
         </div>
       </section>
 
-      <section className="container-liquid section-pad">
-        <div className="mb-10 md:mb-14">
+      <section className="section-pad">
+        <div className="container-liquid mb-10 md:mb-14">
           <SectionEyebrow>{copy.storyGalleryEyebrow}</SectionEyebrow>
           <p className="lead mt-4 max-w-xl">Momenti della giornata — ritmo, luce, dettagli.</p>
         </div>
-        <PortfolioMasonry items={masonryItems} />
+        <PortfolioMasonry items={masonryItems} sizes="100vw" />
       </section>
 
       <section className="container-liquid pb-24 md:pb-32">
